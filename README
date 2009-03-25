@@ -1,4 +1,4 @@
-unique
+libunique1.0
 ------------------------------------------
 Unique is a library for writing single instance application. If you 
 launch a single instance application twice, the second instance will 
@@ -8,7 +8,7 @@ class, taking care of all the IPC machinery needed to send messages to
 a running instance, and also handling the startup notification side.
 
 Runtime requirements:
-  cygwin-1.7.0-43
+  cygwin-1.7.0-44
   libdbus-glib_1_2-0.80-10
   libgcc1-4.3.2-2
   libglib2.0_0-2.20.0-1
@@ -23,9 +23,9 @@ Build requirements:
   cygport-0.9.6-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
-  gnome-common-2.24.0-1
+  gnome-common-2.26.0-1
   gtk-doc-1.11-2
-  libtool-2.2.7a-1
+  libtool-2.2.6a-1
   make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
@@ -34,21 +34,21 @@ Canonical website:
   http://live.gnome.org/LibUnique
 
 Canonical download:
-  http://www.gnome.org/~ebassi/source/
+  ftp://ftp.gnome.org/pub/GNOME/sources/libunique/
 
 -------------------------------------------
 
 Build instructions:
-  unpack unique-1.0.6-X-src.tar.bz2
+  unpack libunique1.0-1.0.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./unique-1.0.6-X.cygport all
+  cygport ./libunique1.0-1.0.8-X.cygport all
 
 This will create:
-  /usr/src/libunique1.0-devel-1.0.6-X.tar.bz2
-  /usr/src/libunique1.0_0-1.0.6-X.tar.bz2
-  /usr/src/unique-1.0.6-X-src.tar.bz2
+  /usr/src/libunique1.0-1.0.8-X-src.tar.bz2
+  /usr/src/libunique1.0-devel-1.0.8-X.tar.bz2
+  /usr/src/libunique1.0_0-1.0.8-X.tar.bz2
 
 -------------------------------------------
 
@@ -56,11 +56,11 @@ Files included in the binary packages:
 
 (libunique1.0_0)
   /usr/bin/cygunique-1.0-0.dll
-  /usr/share/doc/unique/AUTHORS
-  /usr/share/doc/unique/COPYING
-  /usr/share/doc/unique/ChangeLog
-  /usr/share/doc/unique/NEWS
-  /usr/share/doc/unique/README
+  /usr/share/doc/libunique1.0/AUTHORS
+  /usr/share/doc/libunique1.0/COPYING
+  /usr/share/doc/libunique1.0/ChangeLog
+  /usr/share/doc/libunique1.0/NEWS
+  /usr/share/doc/libunique1.0/README
 
 (libunique1.0-devel)
   /usr/include/unique-1.0/unique/unique.h
@@ -92,7 +92,7 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.0.6-10 -----
+----- version 1.0.8-1 -----
 Initial release for Cygwin 1.7.
 
 
