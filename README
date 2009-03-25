@@ -1,0 +1,100 @@
+unique
+------------------------------------------
+Unique is a library for writing single instance application. If you 
+launch a single instance application twice, the second instance will 
+either just quit or will send a message to the running instance. Unique 
+makes it easy to write this kind of applications, by providing a base 
+class, taking care of all the IPC machinery needed to send messages to 
+a running instance, and also handling the startup notification side.
+
+Runtime requirements:
+  cygwin-1.7.0-43
+  libdbus-glib_1_2-0.80-10
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.0-1
+  libgtk2.0_0-2.16.0-1
+  libX11_6-1.2-10
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.24.0-1
+  gtk-doc-1.11-2
+  libtool-2.2.7a-1
+  make-3.81-2
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://live.gnome.org/LibUnique
+
+Canonical download:
+  http://www.gnome.org/~ebassi/source/
+
+-------------------------------------------
+
+Build instructions:
+  unpack unique-1.0.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./unique-1.0.6-X.cygport all
+
+This will create:
+  /usr/src/libunique1.0-devel-1.0.6-X.tar.bz2
+  /usr/src/libunique1.0_0-1.0.6-X.tar.bz2
+  /usr/src/unique-1.0.6-X-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libunique1.0_0)
+  /usr/bin/cygunique-1.0-0.dll
+  /usr/share/doc/unique/AUTHORS
+  /usr/share/doc/unique/COPYING
+  /usr/share/doc/unique/ChangeLog
+  /usr/share/doc/unique/NEWS
+  /usr/share/doc/unique/README
+
+(libunique1.0-devel)
+  /usr/include/unique-1.0/unique/unique.h
+  /usr/include/unique-1.0/unique/uniqueapp.h
+  /usr/include/unique-1.0/unique/uniquebackend.h
+  /usr/include/unique-1.0/unique/uniquemessage.h
+  /usr/include/unique-1.0/unique/uniqueversion.h
+  /usr/lib/libunique-1.0.dll.a
+  /usr/lib/libunique-1.0.la
+  /usr/lib/pkgconfig/unique-1.0.pc
+  /usr/share/gtk-doc/html/unique/UniqueApp.html
+  /usr/share/gtk-doc/html/unique/UniqueBackend.html
+  /usr/share/gtk-doc/html/unique/home.png
+  /usr/share/gtk-doc/html/unique/index.html
+  /usr/share/gtk-doc/html/unique/index.sgml
+  /usr/share/gtk-doc/html/unique/ix01.html
+  /usr/share/gtk-doc/html/unique/left.png
+  /usr/share/gtk-doc/html/unique/license.html
+  /usr/share/gtk-doc/html/unique/right.png
+  /usr/share/gtk-doc/html/unique/style.css
+  /usr/share/gtk-doc/html/unique/unique-Message-Data.html
+  /usr/share/gtk-doc/html/unique/unique-Versioning-Information.html
+  /usr/share/gtk-doc/html/unique/unique-overview.html
+  /usr/share/gtk-doc/html/unique/unique.devhelp
+  /usr/share/gtk-doc/html/unique/unique.devhelp2
+  /usr/share/gtk-doc/html/unique/up.png
+
+------------------
+
+Port Notes:
+
+----- version 1.0.6-10 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

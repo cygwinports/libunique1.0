@@ -1,0 +1,11 @@
+category: Gnome
+requires: cygwin libdbus-glib_1-devel libglib2.0-devel libgtk2.0-devel libX11-devel libunique1.0_0
+external-source: unique
+sdesc: "GTK+ single-instance application library (libdevel)"
+ldesc: "Unique is a library for writing single instance application. If 
+you launch a single instance application twice, the second instance 
+will either just quit or will send a message to the running instance. 
+Unique makes it easy to write this kind of applications, by providing a 
+base class, taking care of all the IPC machinery needed to send 
+messages to a running instance, and also handling the startup 
+notification side."
