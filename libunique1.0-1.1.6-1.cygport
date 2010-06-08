@@ -1,0 +1,12 @@
+ORIG_PN="libunique"
+inherit gnome2
+
+DESCRIPTION="GTK+ single instance application library"
+HOMEPAGE="http://live.gnome.org/LibUnique"
+
+PATCH_URI="1.1.6-compile.patch"
+
+PKG_NAMES="${PN} ${PN}_0 ${PN}-devel girepository-Unique1.0"
+libunique1_0_0_CONTENTS="usr/bin/cygunique-1.0-0.dll usr/share/doc/"
+libunique1_0_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Unique1_0_CONTENTS="usr/*/gir*/Unique-1.0.*"
