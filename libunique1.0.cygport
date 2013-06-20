@@ -1,0 +1,29 @@
+ORIG_PN="libunique"
+inherit gnome2
+
+NAME="libunique1.0"
+VERSION=1.1.6
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GTK+ single-instance application library"
+DESCRIPTION="Unique is a library for writing single instance application. If
+you launch a single instance application twice, the second instance will either
+just quit or will send a message to the running instance. Unique makes it easy
+to write this kind of applications, by providing a base class, taking care of
+all the IPC machinery needed to send messages to a running instance, and also
+handling the startup notification side."
+HOMEPAGE="http://live.gnome.org/LibUnique"
+
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/unique.git/plain/fix-unused-but-set-variable.patch
+	http://pkgs.fedoraproject.org/cgit/unique.git/plain/fix-disable-deprecated.patch
+	1.1.6-compile.patch
+"
+
+PKG_NAMES="${NAME}_0 ${NAME}-devel girepository-Unique1.0"
+libunique1_0_0_CONTENTS="usr/bin/cygunique-1.0-0.dll usr/share/doc/"
+libunique1_0_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Unique1_0_CONTENTS="usr/*/gir*/Unique-1.0.*"
+
+# silence deprecation Werror's
+CYGCONF_ARGS="--disable-maintainer-flags"
